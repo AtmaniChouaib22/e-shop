@@ -3,6 +3,8 @@ import Layout from "../components/layout";
 import Ordercount from "../components/ordercount";
 import { useState } from "react";
 import Cart from "../components/cart";
+import Navbar from "../components/nav";
+import Footer from "../components/footer";
 
 const Deataileditem = ({ product }) => {
   const [count, setCount] = useState(0);
@@ -33,10 +35,11 @@ const Deataileditem = ({ product }) => {
   };
 
   return (
-    <Layout>
-      <div className="sm:grid grid-cols-2 place-items-center ">
-        <div>
-          <img src={product.image} alt={product.title} className="h-60" />
+    <div className="flex-col">
+    <Navbar />
+      <div className="flex justify-center items-center flex-wrap pt-9 ">
+        <div className="w-60">
+          <img src={product.image} alt={product.title} className="h-72" />
         </div>
         <div className="w-96">
           <Ordercount
@@ -47,13 +50,15 @@ const Deataileditem = ({ product }) => {
             addItems={addItems}
           />
         </div>
-        <div className="col-span-2">
-          <div>Description</div>
-          {product.description}
-        </div>
       </div>
-      <Cart data={items} total={total} />
-    </Layout>
+      <div className="px-8 pt-8">
+        <h1>Description</h1>
+        {product.description}
+      </div>
+      <div className="relative sm:absolute inset-x-0 bottom-0">
+        <Footer />
+      </div>
+    </div>
   );
 };
 

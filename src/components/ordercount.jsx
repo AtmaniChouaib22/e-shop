@@ -1,6 +1,6 @@
 const Ordercount = ({ product, count, inc, dec, addItems }) => {
   return (
-    <div className="border-2">
+    <div className="border-2 p-4">
       <div>
         <div className="text-lg font-bold">{product.title}</div>
         <div>{product.price}</div>
@@ -12,7 +12,7 @@ const Ordercount = ({ product, count, inc, dec, addItems }) => {
         </div>
         <button onClick={dec}>Decrement</button>
       </div>
-      <div>
+      <div className="flex justify-center">
         <button type="submit" onClick={addItems}>
           add to Cart
         </button>

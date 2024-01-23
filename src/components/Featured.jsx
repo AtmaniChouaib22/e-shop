@@ -13,15 +13,18 @@ const Featured = () => {
 
   return (
     <div>
-      {products.map((product) => (
-        <Card
-          id={product.id}
-          key={product.id}
-          title={product.title}
-          price={product.price}
-          image={product.image}
-        />
-      ))}
+      <div className="text-center font-extrabold text-4xl">Featured</div>
+      <div className="flex justify-center items-center gap-3 flex-wrap p-8">
+        {products.map((product) => (
+          <Card
+            id={product.id}
+            key={product.id}
+            title={product.title}
+            price={product.price}
+            image={product.image}
+          />
+        ))}
+      </div>
     </div>
   );
 };

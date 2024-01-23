@@ -14,15 +14,17 @@ const AllProducts = () => {
 
   return (
     <Layout>
-      {products.map((item) => (
-        <Card
-          id={item.id}
-          key={item.id}
-          title={item.title}
-          price={item.price}
-          image={item.image}
-        />
-      ))}
+      <div className="flex flex-wrap gap-3 justify-center items-center py-14">
+        {products.map((item) => (
+          <Card
+            id={item.id}
+            key={item.id}
+            title={item.title}
+            price={item.price}
+            image={item.image}
+          />
+        ))}
+      </div>
     </Layout>
   );
 };
