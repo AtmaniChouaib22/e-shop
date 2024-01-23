@@ -1,22 +1,21 @@
-import { useState } from "react";
-
 const Ordercount = ({ product, count, inc, dec, addItems }) => {
-  
-  
-
   return (
-    <div>
+    <div className="border-2">
       <div>
-        <div>{product.title}</div>
+        <div className="text-lg font-bold">{product.title}</div>
         <div>{product.price}</div>
       </div>
-      <div>
-        <button onClick={inc}>increment</button>
-        <input type="text" value={count}/>
-        <button onClick={dec}>increment</button>
+      <div className="flex justify-around">
+        <button onClick={inc}>Increment</button>
+        <div name={product.id} id={product.id}>
+          {count}
+        </div>
+        <button onClick={dec}>Decrement</button>
       </div>
       <div>
-        <button type="submit" onClick={addItems}>add to Cart</button>
+        <button type="submit" onClick={addItems}>
+          add to Cart
+        </button>
       </div>
     </div>
   );
