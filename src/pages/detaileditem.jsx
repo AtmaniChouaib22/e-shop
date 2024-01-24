@@ -36,12 +36,16 @@ const Deataileditem = ({ product }) => {
 
   return (
     <div className="flex-col">
-    <Navbar />
-      <div className="flex justify-center items-center flex-wrap pt-9 ">
-        <div className="w-60">
-          <img src={product.image} alt={product.title} className="h-72" />
+      <Navbar />
+      <div className="flex justify-center items-center flex-wrap pt-9 pb-3 gap-2">
+        <div className="w-60 flex justify-center">
+          <img
+            src={product.image}
+            alt={product.title}
+            className="h-60 sm:h-72"
+          />
         </div>
-        <div className="w-96">
+        <div className="w-60 sm:w-96 flex justify-center">
           <Ordercount
             product={product}
             count={count}
@@ -51,11 +55,11 @@ const Deataileditem = ({ product }) => {
           />
         </div>
       </div>
-      <div className="px-8 pt-8">
-        <h1>Description</h1>
-        {product.description}
+      <div className="px-8 py-8 border-t-2 sm:flex-col items-center bg-slate-50">
+        <h1 className="text-lg font-bold">Description</h1>
+        <div>{product.description}</div>
       </div>
-      <div className="relative sm:absolute inset-x-0 bottom-0">
+      <div className="relative  inset-x-0 bottom-0">
         <Footer />
       </div>
     </div>
