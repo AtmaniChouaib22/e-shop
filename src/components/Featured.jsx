@@ -23,7 +23,7 @@ const Featured = () => {
   }, []);
 
   return (
-    <div className="shadow-lg bg-gray-50 pt-5">
+    <div className="shadow-lg bg-gray-50 pt-5 font-0">
       <div className="text-center font-extrabold text-4xl">Featured Items</div>
       <div className="flex justify-center items-center gap-8 flex-wrap p-8">
         {!isLoading? products.map((product) => (

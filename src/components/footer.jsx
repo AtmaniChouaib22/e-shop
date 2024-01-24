@@ -2,7 +2,7 @@ import { GithubIcon, Github } from "lucide-react";
 
 const Footer = () => {
   return (
-    <div className="flex justify-evenly py-5 border-2 flex-wrap">
+    <div className="flex justify-evenly py-5  flex-wrap font-0 text-white bg-green-900">
       <div>logo</div>
       <div>All rights reserved&#169;</div>
       <div className="flex gap-1">

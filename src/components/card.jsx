@@ -12,7 +12,7 @@ const Card = ({ title, id, image, price }) => {
         handleUrl(id);
       }}
     >
-      <div id={id} className="grid grid-cols-1 h-80 w-52 shadow-md rounded-md justify-center items-center bg-white">
+      <div id={id} className="grid grid-cols-1 h-80 w-52 shadow-md rounded-md justify-center items-center bg-white transition duration-150 ease-out hover:ease-in hover:scale-105">
         <div className="flex justify-center items-center">
           <img src={image} alt={title} className="h-60"/>
         </div>

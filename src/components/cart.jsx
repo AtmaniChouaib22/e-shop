@@ -1,19 +1,18 @@
 import Miniitem from "./miniitem";
 const Cart = ({ data, total }) => {
   return (
-    <div className="">
+    <dialog className="" data-modal>
       <div className=".popnav">
         {data.map((item) => (
-          <Miniitem itemprod={item}/>
+          <Miniitem itemprod={item} key={item.id} />
         ))}
       </div>
       <div>total: {total}</div>
       <div>
         <button>checkout</button>
       </div>
-    </div>
+    </dialog>
   );
 };
 
 export default Cart;
-

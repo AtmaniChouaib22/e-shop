@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
-import Layout from "../components/layout";
 import Ordercount from "../components/ordercount";
 import { useState } from "react";
-import Cart from "../components/cart";
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
 
@@ -36,7 +34,7 @@ const Deataileditem = ({ product }) => {
 
   return (
     <div className="flex-col">
-      <Navbar />
+      <Navbar count={count}/>
       <div className="flex justify-center items-center flex-wrap pt-9 pb-3 gap-2">
         <div className="w-60 flex justify-center">
           <img
