@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Deataileditem from "../pages/detaileditem";
 
-const Fullitem = () => {
+const Fullitem = ({count, setCount}) => {
   const { id } = useParams();
 
   const [product, setProduct] = useState({});
@@ -14,7 +14,7 @@ const Fullitem = () => {
       .catch((err) => console.error(err));
   }, []);
 
-  return <Deataileditem product={product} />;
+  return <Deataileditem product={product} count={count} setCount={setCount} />;
 };
 
 export default Fullitem;

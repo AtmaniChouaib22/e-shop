@@ -4,8 +4,7 @@ import { useState } from "react";
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
 
-const Deataileditem = ({ product }) => {
-  const [count, setCount] = useState(0);
+const Deataileditem = ({ product, setCount, count }) => {
   const [items, setItems] = useState([]);
   const [total, setTotal] = useState(0);
 
@@ -34,7 +33,7 @@ const Deataileditem = ({ product }) => {
 
   return (
     <div className="flex-col">
-      <Navbar count={count}/>
+      <Navbar count={count} />
       <div className="flex justify-center items-center flex-wrap pt-9 pb-3 gap-2">
         <div className="w-60 flex justify-center">
           <img

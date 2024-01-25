@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import Card from "../components/card";
 
-const AllProducts = () => {
+const AllProducts = ({count}) => {
   const [products, setProducts] = useState([]);
   const [isLoading, setLoading] = useState(false);
 
@@ -24,7 +24,7 @@ const AllProducts = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout count={count}>
       <div className="w-full justify-center text-center items-center text-2xl pt-4 font-bold">All Products</div>
       <div className="flex flex-wrap gap-3 justify-center items-center py-14">
         {!isLoading ? (
