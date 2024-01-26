@@ -27,7 +27,6 @@ const Deataileditem = ({ product, setCount, count }) => {
   const addItems = () => {
     setItems([...items, product]);
     findTotal(items);
-    setCount(count + 1);
     setTotal(total + product.price);
   };
 

@@ -1,8 +1,11 @@
-# React + Vite
+<h1>the odin project: Shopping cart Project</h1>
+<p>built using <a href="https://fakestoreapi.com">fakestore API</a>, React.js with vite, Tailwind.css , Eslint and prettier config</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h4>this project covers: </h4>
+<ul>
+    <li>React OSP concept</li>
+    <li>React routing</li>
+    <li>React proptypes checking</li>
+    <li>complex state without state management library</li>
+    <li>front end data fetching with external API(fakestore API)</li>
+</ul>
