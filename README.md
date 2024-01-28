@@ -10,4 +10,4 @@
     <li>front end data fetching with external API(fakestore API)</li>
 </ul>
 <img src="store.png">
-<img src="store2.png">
+
