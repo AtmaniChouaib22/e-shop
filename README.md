@@ -5,8 +5,9 @@
 <ul>
     <li>React OSP concept</li>
     <li>React routing</li>
+    <li>State managment using Context API</li>
     <li>React proptypes checking</li>
-    <li>complex state without state management library</li>
     <li>front end data fetching with external API(fakestore API)</li>
 </ul>
 <img src="store.png">
+<img src="store2.png">
