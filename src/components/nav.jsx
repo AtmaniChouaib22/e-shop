@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { X, Menu, ShoppingCart } from "lucide-react";
 import { useState } from "react";
+import { Shopcontext } from "../Router";
+import { useContext } from "react";
 
-const NavLinks = ({ count }) => {
+const NavLinks = () => {
+  const { items } = useContext(Shopcontext);
   return (
     <div className="flex w-full items-center justify-evenly py-4 font-0">
       <Link to="/">
@@ -15,17 +18,19 @@ const NavLinks = ({ count }) => {
           Products
         </span>
       </Link>
-      <Link to="">
+      <Link to="/cart">
         <div className="flex gap-1">
           <ShoppingCart />
-          <div className="bg-red-500 px-1 rounded-full text-white">{count}</div>
+          <div className="bg-red-500 px-1 rounded-full text-white">
+            {items.length}
+          </div>
         </div>
       </Link>
     </div>
   );
 };
 
-const Navbar = ({ count }) => {
+const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const toggleNav = () => {
     setOpen(!isOpen);
@@ -43,14 +48,14 @@ const Navbar = ({ count }) => {
         />
       </div>
       <div className="hidden sm:flex">
-        <NavLinks count={count} />
+        <NavLinks />
       </div>
       <div className="sm:hidden flex justify-center items-center">
         <button onClick={toggleNav}>{isOpen ? <X /> : <Menu />}</button>
       </div>
       {isOpen && (
         <div className="flex basis-full flex-col items-center col-span-4">
-          <NavLinks count={count} />
+          <NavLinks />
         </div>
       )}
     </div>

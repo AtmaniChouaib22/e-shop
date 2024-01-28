@@ -4,35 +4,20 @@ import { useState } from "react";
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
 
-const Deataileditem = ({ product, setCount, count }) => {
-  const [items, setItems] = useState([]);
-  const [total, setTotal] = useState(0);
-
-  const findTotal = (items) => {
-    items.map((item) => {
-      setTotal(total + item.price);
-    });
-  };
+const Deataileditem = ({ product }) => {
+  const [orderCount, setOrderCount] = useState(0);
 
   const inc = () => {
-    setCount(count + 1);
-    setTotal(total + product.price);
+    setOrderCount(orderCount + 1);
   };
 
   const dec = () => {
-    setCount(count - 1);
-    setTotal(total - product.price);
-  };
-
-  const addItems = () => {
-    setItems([...items, product]);
-    findTotal(items);
-    setTotal(total + product.price);
+    setOrderCount(orderCount - 1);
   };
 
   return (
     <div className="flex-col">
-      <Navbar count={count} />
+      <Navbar />
       <div className="flex justify-center items-center flex-wrap pt-9 pb-3 gap-2">
         <div className="w-60 flex justify-center">
           <img
@@ -44,10 +29,9 @@ const Deataileditem = ({ product, setCount, count }) => {
         <div className="w-60 sm:w-96 flex justify-center">
           <Ordercount
             product={product}
-            count={count}
+            orderCount={orderCount}
             inc={inc}
             dec={dec}
-            addItems={addItems}
           />
         </div>
       </div>

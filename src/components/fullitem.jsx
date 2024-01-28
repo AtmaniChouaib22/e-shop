@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Deataileditem from "../pages/detaileditem";
 
-const Fullitem = ({count, setCount}) => {
-  const { id } = useParams();
-
+const Fullitem = () => {
   const [product, setProduct] = useState({});
+  const { id } = useParams();
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)
@@ -14,7 +13,7 @@ const Fullitem = ({count, setCount}) => {
       .catch((err) => console.error(err));
   }, []);
 
-  return <Deataileditem product={product} count={count} setCount={setCount} />;
+  return <Deataileditem product={product} />;
 };
 
 export default Fullitem;
