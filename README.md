@@ -1,4 +1,4 @@
-<h1>the odin project: Shopping cart Project</h1>
+<h1>Shopping cart Project</h1>
 <p>built using <a href="https://fakestoreapi.com">fakestore API</a>, React.js with vite, Tailwind.css , Eslint and prettier config</p>
 
 <a href="https://erandomshop.netlify.app/">visit here</a>
